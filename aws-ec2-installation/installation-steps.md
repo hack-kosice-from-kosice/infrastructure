@@ -28,3 +28,8 @@ ssh hack-kosice-ec2
 ```
  docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ``` 
+
+6. Maven installation 
+```
+sudo apt install maven
+```
