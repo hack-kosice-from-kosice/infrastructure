@@ -23,23 +23,9 @@ ssh hack-kosice-ec2
  - [Docker compose installation](https://docs.docker.com/compose/install/)
 
 5. Jenkins installation
- - Using `docker-compose up`
- - Initial Jenkins password:
-```
- docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
-``` 
+ - [Instructions](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04)
 
 6. Maven installation 
 ```
 sudo apt install maven
-```
-
-7. Jenkins build setup
-```
-mvn clean install
-scp -i "/var/jenkins_home/hack-kosice-ec2.pem" target/main-service-0.0.1-SNAPSHOT.jar ubuntu@ec2-18-159-195-207.eu-central-1.compute.amazonaws.com:/home/ubuntu/main-service-app
-ssh -i "/var/jenkins_home/hack-kosice-ec2.pem" ubuntu@ec2-18-159-195-207.eu-central-1.compute.amazonaws.com
-cd /home/ubuntu/main-service-app
-kill $(cat ./pid.file)
-java -jar main-service-0.0.1-SNAPSHOT.jar & echo $! > ./pid.file
 ```
