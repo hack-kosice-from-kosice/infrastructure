@@ -22,3 +22,9 @@ ssh hack-kosice-ec2
  - [Docker post installation](https://docs.docker.com/engine/install/linux-postinstall/#:~:text=The%20Docker%20daemon%20binds%20to,runs%20as%20the%20root%20user.&text=When%20the%20Docker%20daemon%20starts,members%20of%20the%20docker%20group.)
  - [Docker compose installation](https://docs.docker.com/compose/install/)
 
+5. Jenkins installation
+ - Using `docker-compose up`
+ - Initial Jenkins password:
+```
+ docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+``` 
