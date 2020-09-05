@@ -7,8 +7,8 @@
 ```
 Host hack-kosice-ec2
     User ubuntu
-    IdentityFile /path/to/pem-file
-    HostName ec2-18-159-195-207.eu-central-1.compute.amazonaws.com
+    IdentityFile </path/to/pem-file>
+    HostName <ec2-instance-public-dns-name>
 ```
 
 3. After that it is possible to connect to instance using
